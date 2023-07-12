@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sakura">
+
+    <main>
+        <div class="main">
+            <div class="modal-window hidden">
+                <form id="modalWindow">
+                    <div class="select-box">
+                        <h3>Select theme:</h3>
+                        <select name="theme" id="theme">
+                            <option value="redArch">Red arch</option>
+                            <option value="castle">Ancient castle</option>
+                            <option value="water">Water</option>
+                            <option value="howlsCastle">Howl's Moving Castle</option>
+                            <option value="newYork">Night New York</option>
+                            <option selected value="sakura">Sakura</option>
+                        </select>
+                    </div>
+                    <div class="modes">
+                        <label>Pomodoro <input type="number" id="workTime" value="25"></label>
+                        <label>Short Break <input type="number" id="shortBreakTime" value="5"></label>
+                        <label>Long Break <input type="number" id="longBreakTime" value="15"></label>
+                    </div>
+                    <div class="close-buttons">
+                        <input type="submit" value="Close">          
+                        <input type="submit" value="Save">
+                    </div>
+                </form>
+            </div>
+
+
+            
+            <div class="timer-box">
+                <div>
+                    <button id="workButton" class="active mode-buttons">work</button>
+                    <button id="shortBreakButton" class="mode-buttons">short break</button>
+                    <button id="longBreakButton" class="mode-buttons">long break</button>
+                </div>
+                <div class="time">
+                    <p class="countDown minute-part">00</p>
+                    <p> : </p>
+                    <p class="countDown second-part"> 00 </p>
+                </div>
+                <div class="settings">
+                    <button id="controlButton"> start </button>
+                    <img id="resetButton" src="images/refresh.png" alt="reset">
+                    <img id="settingButton" src="images/settings.png" alt="settings">
+                </div>
+            </div>
+
+            <div class="to-do-list">
+                <div class="to-do-list-container">
+                    <div class="add-task">
+                        <input id="taskInput" type="text" placeholder="add your task..." maxlength="25">
+                        <button type="submit" class="add-button"> add </button>
+                    </div>
+                    <div class="tasks-container">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </main>    
+
+
+    <script src="main.js"></script>
+    <script src="todolist.js"></script>
+</body>
+</html>
